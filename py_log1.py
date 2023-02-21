@@ -24,12 +24,12 @@ else:
     # we are running in a normal Python environment
     log_path = os.path.dirname(os.path.abspath(__file__))
 
-log_path = log_path + '\\' + LOG_CONFIG_NAME
+log_path = log_path + '/' + LOG_CONFIG_NAME
 
 logging.config.fileConfig(log_path)
 log = logging.getLogger(LOG_ENV)
 
-fh = logging.FileHandler(FOLDER_SAVE_lOG + '\\' +
+fh = logging.FileHandler(FOLDER_SAVE_lOG + '/' +
                          '{:%Y-%m-%d}.log'.format(datetime.now()), encoding="UTF-8")
 formatter = logging.Formatter(
     '%(asctime)s | %(name)-4s | %(levelname)-8s | %(filename)s | %(lineno)04d | %(funcName)s | %(message)s')

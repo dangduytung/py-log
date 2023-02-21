@@ -25,7 +25,7 @@ config_path = os.path.join(application_path, LOG_CONFIG_NAME)
 logging.config.fileConfig(config_path)
 log = logging.getLogger(LOG_ENV)
 
-fh = logging.FileHandler(FOLDER_SAVE_lOG + '\\' +
+fh = logging.FileHandler(FOLDER_SAVE_lOG + '/' +
                          '{:%Y-%m-%d}.log'.format(datetime.now()), encoding="UTF-8")
 formatter = logging.Formatter(
     '%(asctime)s | %(name)-4s | %(levelname)-8s | %(filename)s | %(lineno)04d | %(funcName)s | %(message)s')
